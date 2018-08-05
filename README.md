@@ -6,8 +6,9 @@ Collection of scripts to help you analyse your investments.
 
 ## to\_fixed\_deposit
 ```
-usage: to_fix_deposit.py [-h] [--lower-rate LOWER_RATE]
-                         [--upper-rate UPPER_RATE] [--rate-step RATE_STEP]
+usage: to_fix_deposit.py [-h] [--interest-tax INTEREST_TAX]
+                         [--lower-rate LOWER_RATE] [--upper-rate UPPER_RATE]
+                         [--rate-step RATE_STEP]
                          input
 
 Check which kind of a fixed deposit with a monthly interest payout would give
@@ -19,10 +20,12 @@ positional arguments:
 
 optional arguments:
   -h, --help            show this help message and exit
+  --interest-tax INTEREST_TAX
+                        Tax deduced from paid interests (19%)
   --lower-rate LOWER_RATE
-                        Lower interest rate bound (default 0.0%)
+                        Lower interest rate bound (default 0%)
   --upper-rate UPPER_RATE
-                        Upper interest rate bound (default 500.0%)
+                        Upper interest rate bound (default 500%)
   --rate-step RATE_STEP
-                        Interest rate step used in search (default 0.1%)
+                        Interest rate step used in search (default 0.05%)
 ```
