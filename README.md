@@ -29,3 +29,21 @@ optional arguments:
   --rate-step RATE_STEP
                         Interest rate step used in search (default 0.05%)
 ```
+
+### Example
+investment.txt
+```
+100,100,100,100,100,100,100,100,200,200,200,200,200,200,200,200,200,200,200,200
+3482
+```
+```
+python to_fix_deposit.py investment.txt
+INVESTMENT
+  payments           : 20
+  sum payments       : 3200.00
+  value              : 3482.00
+FIXED DEPOSIT WITH MONTHLY INTEREST PAYOUT
+ yearly interest rate: 13.75%
+ value               : 3481.77
+```
+
