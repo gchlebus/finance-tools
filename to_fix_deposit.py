@@ -42,7 +42,7 @@ if __name__ == '__main__':
 
   args = parser.parse_args()
   payments, value = read_file(args.input)
-  rate, end_value = to_fix_deposit(payments, value, args.lower_rate, args.upper_rate, args.rate_step)
+  rate, end_value = to_fix_deposit(payments, value, args.interest_tax, args.lower_rate, args.upper_rate, args.rate_step)
   print('INVESTMENT')
   print('  payments           : %d' % len(payments))
   print('  sum payments       : %.2f' % sum(payments))
