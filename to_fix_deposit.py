@@ -13,7 +13,7 @@ def to_fix_deposit(monthly_payments, investment_value, lower=0, upper=500, step=
     return sum([p*(1+rate/100)**(months-idx) for idx, p in enumerate(monthly_payments)])
 
   rates = np.arange(lower, upper, step)
-  values = np.asarray(map(eval, rates))
+  values = np.asarray(list(map(eval, rates)))
   idx = np.abs(values - investment_value).argmin()
   return rates[idx], values[idx]
 
@@ -21,7 +21,7 @@ def read_file(filename):
   with open(filename, 'r') as f:
     payments = f.readline()
     value = f.readline()
-  return map(float, payments.split(',')), float(value)
+  return list(map(float, payments.split(','))), float(value)
 
 if __name__ == '__main__':
   import argparse
