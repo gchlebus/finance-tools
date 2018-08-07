@@ -2,7 +2,7 @@
 
 import numpy as np
 
-def to_fix_deposit(monthly_payments, investment_value, interest_tax=19, lower=0, upper=500,
+def fix_deposit(monthly_payments, investment_value, interest_tax=19, lower=0, upper=500,
                    step=0.5):
   '''Computes interest rate of a fixed deposit with a monthly interest payout
   given investment history.
