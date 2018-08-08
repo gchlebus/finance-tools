@@ -4,30 +4,27 @@
 
 Collection of scripts to help you analyse your investments.
 
-## to\_fixed\_deposit
+## Usage
 ```
-usage: to_fix_deposit.py [-h] [--interest-tax INTEREST_TAX]
-                         [--lower-rate LOWER_RATE] [--upper-rate UPPER_RATE]
-                         [--rate-step RATE_STEP]
-                         input
+Usage: ft [OPTIONS] COMMAND [ARGS]...
 
-Check which kind of a fixed deposit with a monthly interest payout would give
-the same results as your investment.
+Options:
+  --help  Show this message and exit.
 
-positional arguments:
-  input                 Input file. First line - list of comma separated
-                        monthly payments. Second line - investment value.
+Commands:
+  fix_deposit  Check what kind of a fixed deposit with a...
+```
 
-optional arguments:
-  -h, --help            show this help message and exit
-  --interest-tax INTEREST_TAX
-                        Tax deduced from paid interests (19%)
-  --lower-rate LOWER_RATE
-                        Lower interest rate bound (default 0%)
-  --upper-rate UPPER_RATE
-                        Upper interest rate bound (default 500%)
-  --rate-step RATE_STEP
-                        Interest rate step used in search (default 0.05%)
+## ft fixed\_deposit
+```
+Usage: ft fix_deposit [OPTIONS] INPUT
+
+  Check what kind of a fixed deposit with a monthly interest payout would
+  give the same results as your investment.
+
+Options:
+  --interest-tax FLOAT  Tax deduced from paid interests  [default: 19.0]
+  --help                Show this message and exit.
 ```
 
 ### Example
@@ -37,7 +34,7 @@ investment.txt
 3482
 ```
 ```
-python to_fix_deposit.py investment.txt
+/ft fix_deposit investment.txt
 INVESTMENT
   payments           : 20
   sum payments       : 3200.00
