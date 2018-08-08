@@ -28,13 +28,8 @@ Options:
 ```
 
 ### Example
-investment.txt
 ```
-100,100,100,100,100,100,100,100,200,200,200,200,200,200,200,200,200,200,200,200
-3482
-```
-```
-/ft fix_deposit investment.txt
+/ft fix_deposit finance_tools/test/data/investment.txt
 INVESTMENT
   payments           : 20
   sum payments       : 3200.00
