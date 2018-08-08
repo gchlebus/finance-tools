@@ -3,7 +3,7 @@
 __author__ = 'gchlebus'
 
 import click
-from fix_deposit import fix_deposit
+from finance_tools.fix_deposit import fix_deposit
 
 @click.group()
 def cli():

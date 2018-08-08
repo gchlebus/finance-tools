@@ -2,9 +2,9 @@
 
 __author__ = 'gchlebus'
 
-from account_history import AccountHistory
+from ..account_history import AccountHistory
 
-FILEPATH = 'test/account_history.csv'
+FILEPATH = 'finance_tools/test/data/account_history.csv'
 
 def test_column_names():
   a = AccountHistory(FILEPATH, 2)
