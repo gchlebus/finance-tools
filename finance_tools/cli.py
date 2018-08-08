@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 __author__ = 'gchlebus'
 
@@ -11,5 +11,3 @@ def cli():
 
 cli.add_command(fix_deposit)
 
-if __name__ == '__main__':
-  cli()

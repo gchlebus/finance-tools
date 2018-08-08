@@ -4,6 +4,13 @@
 
 Collection of scripts to help you analyse your investments.
 
+## Installation
+```
+git clone https://github.com/gchlebus/finance-tools.git
+cd finance-tools
+pip install .
+```
+
 ## Usage
 ```
 Usage: ft [OPTIONS] COMMAND [ARGS]...
@@ -29,7 +36,7 @@ Options:
 
 ### Example
 ```
-/ft fix_deposit finance_tools/test/data/investment.txt
+ft fix_deposit finance_tools/test/data/investment.txt
 INVESTMENT
   payments           : 20
   sum payments       : 3200.00
