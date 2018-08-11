@@ -40,23 +40,23 @@ def test_date_sorting():
 
 def test_startdate():
   a = AccountHistory(FILEPATH, 2)
-  assert a.startdate() == date(2018, 02, 02)
+  assert a.startdate() == date(2018, 2, 2)
 
 def test_enddate():
   a = AccountHistory(FILEPATH, 2)
-  assert a.enddate() == date(2018, 06, 05)
+  assert a.enddate() == date(2018, 6, 5)
   
 def test_get_monthly_amounts():
   a = AccountHistory(FILEPATH, 2)
-  v = a.get_monthly_amounts(date(2018, 06, 05))
+  v = a.get_monthly_amounts(date(2018, 6, 5))
   assert len(v) == 5
   assert v == [300, 0, 0, 200, 300]
 
-  v = a.get_monthly_amounts(date(2018, 06, 04))
+  v = a.get_monthly_amounts(date(2018, 6, 4))
   assert len(v) == 5
   assert v == [300, 0, 0, 200, 0]
 
-  v = a.get_monthly_amounts(date(2018, 07, 04))
+  v = a.get_monthly_amounts(date(2018, 7, 4))
   assert len(v) == 6
   assert v == [300, 0, 0, 200, 300, 0]
 
