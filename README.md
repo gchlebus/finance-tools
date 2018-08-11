@@ -13,36 +13,43 @@ pip install .
 
 ## Usage
 ```
-Usage: ft [OPTIONS] COMMAND [ARGS]...
+Usage: ft [OPTIONS] INPUT COMMAND [ARGS]...
+
+  Read account history csv file from INPUT and perform a COMMAND.
 
 Options:
-  --help  Show this message and exit.
+  -r, --header-row INTEGER  [default: 2]
+  --date-colname TEXT       [default: Date]
+  --help                    Show this message and exit.
 
 Commands:
   fix_deposit  Check what kind of a fixed deposit with a...
 ```
 
-## ft fixed\_deposit
+## Commands 
+
+### fix_deposit
 ```
-Usage: ft fix_deposit [OPTIONS] INPUT
+Usage: ft fix_deposit [OPTIONS] VALUE
 
   Check what kind of a fixed deposit with a monthly interest payout would
   give the same results as your investment.
 
 Options:
   --interest-tax FLOAT  Tax deduced from paid interests  [default: 19.0]
+  -c, --colname TEXT    Column name with amounts.  [default: Amount]
   --help                Show this message and exit.
 ```
 
-### Example
+Example
 ```
-ft fix_deposit finance_tools/test/data/investment.txt
+ft finance_tools/test/data/account_history.csv fix_deposit 900
 INVESTMENT
-  payments           : 20
-  sum payments       : 3200.00
-  value              : 3482.00
+  payments           : 3
+  sum payments       : 800.00
+  value              : 900.00
 FIXED DEPOSIT WITH MONTHLY INTEREST PAYOUT
- yearly interest rate: 13.75%
- value               : 3481.77
+ yearly interest rate: 36.90%
+ value               : 900.04
 ```
 
