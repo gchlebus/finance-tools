@@ -4,7 +4,7 @@ __author__ = 'gchlebus'
 
 import click
 import numpy as np
-from account_history import AccountHistory
+from .account_history import AccountHistory
 
 pass_account_history = click.make_pass_decorator(AccountHistory)
 
@@ -18,7 +18,7 @@ pass_account_history = click.make_pass_decorator(AccountHistory)
 def fix_deposit(account_history, value, interest_tax, colname):
   """
   Check what kind of a fixed deposit with a monthly interest payout would
-  give the same results as your investment.
+  give the same results as your investment. VALUE denotes the current investment value.
   """
   rate, end_value = _fix_deposit(account_history, value, interest_tax, colname=colname)
   print('INVESTMENT')

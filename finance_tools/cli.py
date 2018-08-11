@@ -3,8 +3,8 @@
 __author__ = 'gchlebus'
 
 import click
-from finance_tools.fix_deposit import fix_deposit
-from account_history import AccountHistory
+from .fix_deposit import fix_deposit
+from .account_history import AccountHistory
 
 @click.group()
 @click.argument('input', type=click.File())

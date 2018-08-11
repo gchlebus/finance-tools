@@ -33,7 +33,8 @@ Commands:
 Usage: ft fix_deposit [OPTIONS] VALUE
 
   Check what kind of a fixed deposit with a monthly interest payout would
-  give the same results as your investment.
+  give the same results as your investment. VALUE denotes the current
+  investment value.
 
 Options:
   --interest-tax FLOAT  Tax deduced from paid interests  [default: 19.0]

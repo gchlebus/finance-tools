@@ -2,7 +2,7 @@
 
 import pandas as pd
 from datetime import timedelta, date
-from utils import month_year_iter, get_last_day_of_month
+from .utils import month_year_iter, get_last_day_of_month
 
 class AccountHistory(object):
   def __init__(self, filename, header=0, date_colname='Date'):
